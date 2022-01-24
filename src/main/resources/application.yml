@@ -1,0 +1,13 @@
+server:
+  http2:
+    enabled: true
+  compression:
+    enabled: true
+  error:
+    include-stacktrace: never
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: testdb
