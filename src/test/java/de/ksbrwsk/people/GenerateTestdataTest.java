@@ -13,21 +13,21 @@ import java.util.List;
 @DataMongoTest(excludeAutoConfiguration = EmbeddedMongoAutoConfiguration.class)
 public class GenerateTestdataTest {
 
-    @Autowired
-    PersonRepository personRepository;
-
-    @Test
-    void testdata() {
-        List<Person> people = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            people.add(new Person("person@" + i));
-        }
-        Flux<Person> personFlux = this.personRepository
-                .deleteAll()
-                .thenMany(this.personRepository.saveAll(people));
-        StepVerifier
-                .create(personFlux)
-                .expectNextCount(100L)
-                .verifyComplete();
-    }
+//    @Autowired
+//    PersonRepository personRepository;
+//
+//    @Test
+//    void testdata() {
+//        List<Person> people = new ArrayList<>();
+//        for (int i = 0; i < 100; i++) {
+//            people.add(new Person("person@" + i));
+//        }
+//        Flux<Person> personFlux = this.personRepository
+//                .deleteAll()
+//                .thenMany(this.personRepository.saveAll(people));
+//        StepVerifier
+//                .create(personFlux)
+//                .expectNextCount(100L)
+//                .verifyComplete();
+//    }
 }
