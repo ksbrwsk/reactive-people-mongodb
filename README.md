@@ -2,9 +2,11 @@
 
 #### MongoDB version for my Reactive Spring Talk 12/2020.
 
+[![Java CI with Maven](https://github.com/ksbrwsk/reactive-people-mongodb/actions/workflows/maven.yml/badge.svg)](https://github.com/ksbrwsk/reactive-people-mongodb/actions/workflows/maven.yml)
+
 **Prerequisites:**
 
-* [Java 17](https://openjdk.net/)
+* [Java 21](https://openjdk.net/)
 * [Apache Maven](https:http://maven.apache.org/)
 * [Docker](https://www.docker.com/)
 
