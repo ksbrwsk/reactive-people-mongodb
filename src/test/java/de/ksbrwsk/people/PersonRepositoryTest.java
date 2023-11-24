@@ -2,7 +2,6 @@ package de.ksbrwsk.people;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
@@ -16,7 +15,7 @@ import reactor.test.StepVerifier;
 import java.util.ArrayList;
 import java.util.List;
 
-@DataMongoTest(excludeAutoConfiguration = EmbeddedMongoAutoConfiguration.class)
+@DataMongoTest
 @Testcontainers
 class PersonRepositoryTest {
 
@@ -24,7 +23,7 @@ class PersonRepositoryTest {
     PersonRepository personRepository;
 
     @Container
-    static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:4.4.2");
+    static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:7.0.3");
 
     @DynamicPropertySource
     static void setProperties(DynamicPropertyRegistry registry) {
